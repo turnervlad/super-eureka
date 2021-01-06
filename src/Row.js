@@ -1,7 +1,6 @@
-import React from "react";
+import {React} from "react";
 
 const Row = (props) => {
-
     return (
         <div className="row-wrapper">
             <div className="items">
@@ -15,7 +14,7 @@ const Row = (props) => {
                     <button>Edit</button>
                 </div>
                 <div className="button">
-                    <button>Delete row</button>
+                    <button onClick={() => props.delete(props.item.id)}>Delete row</button>
                 </div>
             </div>
         </div>

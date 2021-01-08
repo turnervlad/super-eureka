@@ -1,5 +1,5 @@
 import './App.css';
-import * as React from 'react'
+import * as React from 'react';
 import Row from './Row';
 import RowAdd from './Row-add';
 
@@ -22,13 +22,26 @@ class App extends React.Component {
     });
     this.setState({
       items: filteredItems
+    });
+  }
+
+  addRow = (name, username, email, website) => {
+    this.setState({
+      items: [...this.state.items, {'id': new Date().getTime(), 'name': name, 'username': username, 'email': email, 'website': website}]
+    });    
+  }
+
+  submit = (id, name, username, email, website) => {
+    // console.log(id, name, username, email, website);
+    let index = this.state.items.findIndex((x) => x.id===id);
+    // console.log(index);
+    const newState = this.state.items;
+    newState[index] = {'id': +id, 'name': name, 'username': username, 'email': email, 'website': website};
+    // console.log(newState);
+    this.setState({
+      items: newState
     })
   }
-
-  addRow = () => {
-    console.log('dd');
-  }
-
 
   componentDidMount() {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -50,9 +63,7 @@ class App extends React.Component {
         }
       )
   }
-
-
-
+  
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {
@@ -63,7 +74,7 @@ class App extends React.Component {
 
       return (
         <div className="app-wrapper">
-          {items.map(x => <Row delete={this.deleteRow} item={x} />)}
+          {items.map(x => <Row submit={this.submit} delete={this.deleteRow} key={x.id} item={x} />)}
           <RowAdd add={this.addRow}/>
         </div>
       )

@@ -49,7 +49,7 @@ class Row extends React.Component {
         this.props.submit(this.state.id, this.state.name, this.state.username, this.state.email, this.state.website);
         this.setState({
             disabled: true
-        })
+        });
     }
 
     render() {

@@ -3,8 +3,6 @@ import * as React from 'react';
 import Row from './Row';
 import RowAdd from './Row-add';
 
-
-
 class App extends React.Component {
 
   constructor(props) {
@@ -32,12 +30,9 @@ class App extends React.Component {
   }
 
   submit = (id, name, username, email, website) => {
-    // console.log(id, name, username, email, website);
     let index = this.state.items.findIndex((x) => x.id===id);
-    // console.log(index);
     const newState = this.state.items;
     newState[index] = {'id': +id, 'name': name, 'username': username, 'email': email, 'website': website};
-    // console.log(newState);
     this.setState({
       items: newState
     })
@@ -53,8 +48,6 @@ class App extends React.Component {
             items: result
           });
         },
-        // Примечание: важно обрабатывать ошибки именно здесь, а не в блоке catch(),
-        // чтобы не перехватывать исключения из ошибок в самих компонентах.
         (error) => {
           this.setState({
             isLoaded: true,
@@ -63,7 +56,7 @@ class App extends React.Component {
         }
       )
   }
-  
+
   render() {
     const { error, isLoaded, items } = this.state;
     if (error) {

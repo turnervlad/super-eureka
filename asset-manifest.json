@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/super-eureka/static/css/main.5ec4d859.chunk.css",
+    "main.js": "/super-eureka/static/js/main.42ae030a.chunk.js",
+    "main.js.map": "/super-eureka/static/js/main.42ae030a.chunk.js.map",
+    "runtime-main.js": "/super-eureka/static/js/runtime-main.a663bfaa.js",
+    "runtime-main.js.map": "/super-eureka/static/js/runtime-main.a663bfaa.js.map",
+    "static/js/2.8d3235c6.chunk.js": "/super-eureka/static/js/2.8d3235c6.chunk.js",
+    "static/js/2.8d3235c6.chunk.js.map": "/super-eureka/static/js/2.8d3235c6.chunk.js.map",
+    "static/js/3.55a254ae.chunk.js": "/super-eureka/static/js/3.55a254ae.chunk.js",
+    "static/js/3.55a254ae.chunk.js.map": "/super-eureka/static/js/3.55a254ae.chunk.js.map",
+    "index.html": "/super-eureka/index.html",
+    "static/css/main.5ec4d859.chunk.css.map": "/super-eureka/static/css/main.5ec4d859.chunk.css.map",
+    "static/js/2.8d3235c6.chunk.js.LICENSE.txt": "/super-eureka/static/js/2.8d3235c6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a663bfaa.js",
+    "static/js/2.8d3235c6.chunk.js",
+    "static/css/main.5ec4d859.chunk.css",
+    "static/js/main.42ae030a.chunk.js"
+  ]
+}
